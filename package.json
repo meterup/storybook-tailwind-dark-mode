@@ -1,7 +1,7 @@
 {
-  "name": "storybook-tailwind-dark-mode",
+  "name": "@meterup/storybook-tailwind-dark-mode",
   "version": "1.0.11",
-  "description": "Toggle stories between light and dark mode using tailwind",
+  "description": "Toggle stories between light and dark mode using Tailwind",
   "keywords": [
     "storybook-addons",
     "style",

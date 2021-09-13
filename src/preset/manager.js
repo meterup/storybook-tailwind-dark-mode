@@ -8,7 +8,7 @@ addons.register(ADDON_ID, () => {
   // Register the tool
   addons.add(TOOL_ID, {
     type: types.TOOL,
-    title: "Tailwind dark mode",
+    title: "Dark mode",
     match: ({ viewMode }) => !!(viewMode && viewMode.match(/^(story|docs)$/)),
     render: Tool,
   });

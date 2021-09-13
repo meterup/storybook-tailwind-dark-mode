@@ -18,7 +18,7 @@ export const Tool = () => {
     <IconButton
       key={TOOL_ID}
       active={darkMode}
-      title="Enable dark mode"
+      title="Toggle dark mode"
       onClick={toggleDarkMode}
     >
       <svg

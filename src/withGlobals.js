@@ -1,24 +1,20 @@
 /* eslint-env browser */
-import { useEffect, useGlobals } from "@storybook/addons";
+import { useEffect, useGlobals } from '@storybook/addons';
 
 export const withGlobals = (StoryFn, context) => {
   const [{ darkMode }] = useGlobals();
   const isInDocs = context.viewMode === "docs";
 
   useEffect(() => {
-    const selectorId = isInDocs ? `docs-root` : `root`;
-
-    changeBackgroundMode(selectorId, { darkMode, isInDocs });
+    if ({ darkMode, isInDocs }.darkMode) {
+      document.body.classList.add("m-dark");
+    } else {
+      document.body.classList.remove("m-dark");
+    }
   }, [darkMode]);
 
   return StoryFn();
 };
 
-const changeBackgroundMode = (selector, state) => {
-  const rootElement = document.getElementById(selector);
-  if (state.darkMode) {
-    rootElement.classList.add('dark');
-  } else {
-    rootElement.classList.remove('dark')
-  }
-}
+
+

@@ -30,9 +30,9 @@ var withGlobals = function withGlobals(StoryFn, context) {
       darkMode: darkMode,
       isInDocs: isInDocs
     }.darkMode) {
-      document.body.classList.add("m-dark");
+      document.documentElement.classList.add("m-dark");
     } else {
-      document.body.classList.remove("m-dark");
+      document.documentElement.classList.remove("m-dark");
     }
   }, [darkMode]);
   return StoryFn();

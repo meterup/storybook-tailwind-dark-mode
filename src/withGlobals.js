@@ -7,9 +7,9 @@ export const withGlobals = (StoryFn, context) => {
 
   useEffect(() => {
     if ({ darkMode, isInDocs }.darkMode) {
-      document.body.classList.add("m-dark");
+      document.documentElement.classList.add("m-dark");
     } else {
-      document.body.classList.remove("m-dark");
+      document.documentElement.classList.remove("m-dark");
     }
   }, [darkMode]);
 
